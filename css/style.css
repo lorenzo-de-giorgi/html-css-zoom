@@ -2,21 +2,37 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif
+}
+
+:root{
+    --color-black: #000000;
+    --color-darkgray: #222222;
+    --color-grey: #4a4a4a;
+    --color-green: #4bc800;
+    --color-red: #ff0000;
+    --color-white: #ffffff;
 }
 
 ul{
     list-style: none;
+    padding: 0;
+}
+
+.ml-10{
+    margin-left: 10px;
+}
+
+.ml-30{
+    margin-left: 30px;
+    margin-top: 10px;
 }
 
 #app{
     width: 100%;
     height: 100vh;
-    background-color: gray;
-    color: white;
-}
-
-.debug{
-    border: 1px solid red;
+    background-color: var(--color-black);
+    color: var(--color-white);
 }
 
 header{
@@ -40,6 +56,10 @@ header{
     justify-content: flex-end;
 }
 
+.space-between{
+    justify-content: space-between;
+}
+
 .wrap{
     flex-wrap: wrap;
 }
@@ -47,23 +67,77 @@ header{
 main{
     height: calc(100% - 120px);
     overflow-y: auto;
-    padding: 20px;
-    gap: 10px;
+    gap: 5px;
     width: 100%;
 }
 
 #tool-bar{
-    background-color: black;
+    background-color:var(--color-darkgray);
     height: 70px;
 }
 
 .user-box{
     width: calc(100% / 7 - 10px);
     aspect-ratio: 16 / 9;
+    margin-left: 5px;
+    position: relative;
+}
+
+.status-user{
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    bottom: 0;
+    color: var(--color-white);
+    height: 25px;
+    padding: 5px;
 }
 
 .user-box img{
     width: 100%;
     height: 100%;
     display: block;
+}
+
+.btn{
+    background-color: var(--color-darkgray);
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+.white-text{
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+.green-text{
+    color: var(--color-green);
+    text-decoration: none;
+}
+
+.icon{
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.i-txt{
+    font-size: 18px;
+    text-align: center;
+}
+ .c-text{
+    text-align: center;
+}
+
+ul li span{
+    color: var(--color-white);
+}
+
+.end{
+    margin-top: 24px;
+}
+.e-met{
+    background-color: var(--color-grey);
+    color: var(--color-red);
+    font-size: 18px;
+    text-decoration: none;
+    padding: 24px;
 }
